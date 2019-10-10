@@ -10,7 +10,7 @@ RUN echo 'install.packages("stringdist")' | R --save
 RUN mkdir /src
 WORKDIR /src
 COPY * ./
-#RUN mkdir /sample
-#COPY sample/* /sample/
+#RUN mkdir /alice
+#COPY sample/* /alice/
 
-CMD Rscript --save quickstart.r /sample/S1_d15_V9_J2_7.tsv /sample/S1_d0_V9_J2_7.tsv
+CMD Rscript --save quickstart.r /alice/S1_d15_V9_J2_7.tsv /alice/S1_d0_V9_J2_7.tsv
